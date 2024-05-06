@@ -2,7 +2,7 @@ package com.example.practica1Git;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import java.util.Scanner;
 
 @SpringBootApplication
 public class Practica1GitApplication {
@@ -11,10 +11,30 @@ public class Practica1GitApplication {
 		SpringApplication.run(Practica1GitApplication.class, args);
 
 
-		System.out.println("hola");
-		mostrarTabla();
-		tablas25();
-		Salir();
+		System.out.println("hola usuario, ¿Cómo te llamas?");
+		Scanner scanner = new Scanner(System.in);
+		String nombre = scanner.nextLine();
+
+		System.out.println("Bienvenido " + nombre +" Por favor seleccione una opción");
+		System.out.println("Seleccione 1 para mostrar la tabla del 1");
+		System.out.println("Seleccione 2 para mostrar las tablas del 2 al 5");
+		System.out.println("Seleccione 3 para salir del programa");
+		int opcion = scanner.nextInt();
+
+		switch (opcion) {
+			case 1:
+				mostrarTabla();
+				break;
+
+			case 2:
+				tablas25();
+				break;
+			case 3:
+				Salir();
+				break;
+			default:
+				break;
+		}
 	}
 
 
