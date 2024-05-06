@@ -14,6 +14,7 @@ public class Practica1GitApplication {
 		System.out.println("hola");
 		mostrarTabla();
 		tablas25();
+		Salir();
 	}
 
 
@@ -32,6 +33,10 @@ public class Practica1GitApplication {
 			System.out.println("2 x "+index+" = "+index*2+"        "+"3 x "+index+" = "+index*3+"        "+"4 x "+index+" = "+index*4+"        "+"5 x "+index+" = "+index*5);
 		}
 		return null;
+	}
+
+	public static void Salir () {
+		System.exit(0);
 	}
 
 }
